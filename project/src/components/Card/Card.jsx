@@ -1,11 +1,8 @@
 import React from 'react';
 import './Card.css';
 
-
-
 class Card extends React.Component {
   render() {
-    console.log(this.props);
     return (
       <div className='card'>
         <img src={this.props.card.imgUrl} alt="" />
