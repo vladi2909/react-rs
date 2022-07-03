@@ -1,28 +1,24 @@
 import React from 'react';
 import './App.css';
-import cardsData from './cardsData';
-import Card from './components/Card/Card';
+
+import { Routes, Route, Link } from 'react-router-dom';
+import HomePage from './pages/HomePage';
+import AboutPage from './pages/AboutPage';
+import NotFoundPage from './pages/NotFoundPage';
 
 class App extends React.Component {
-  constructor() {
-    super();
-
-    this.state = {
-      cards: cardsData
-    }
-  }
-  
   render() {
-    const cardItem = this.state.cards.map(card => <Card key={card.id} card={card} />)
     return (
       <div className="App">
         <header className="App-header">
-        
+          <Link to="/">Home</Link>
+          <Link to="/about-us">About Us</Link>
         </header>
-        <main>
-          {cardItem}
-        </main>
-        <footer></footer>  
+        <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/about-us' element={<AboutPage />} />
+            <Route path='*' element={<NotFoundPage />} />
+          </Routes>
       </div>
     );
   }

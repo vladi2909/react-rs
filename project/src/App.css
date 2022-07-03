@@ -1,0 +1,14 @@
+.App-header {
+  background-color: rgb(25, 118, 210);
+  height: 60px;
+  display: flex;
+  align-items: center;
+}
+
+.App-header a {
+  margin: 0 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
