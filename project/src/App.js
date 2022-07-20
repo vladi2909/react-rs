@@ -14,6 +14,7 @@ class App extends React.Component {
         <header className="App-header">
           <Link to="/">Home</Link>
           <Link to="/about-us">About Us</Link>
+          <Link to="/forms">Forms</Link>
         </header>
         <Routes>
             <Route path='/' element={<HomePage />} />
